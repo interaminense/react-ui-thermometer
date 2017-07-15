@@ -1,0 +1,35 @@
+$color-a: #f44336;
+$color-b: #2196F3;
+$color-c: #8BC34A;
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #d6d6d6;
+
+$thermometer-bg-color: linear-gradient($color-b, $color-c, $color-a);
+$thermometer-mercury-bg-color: linear-gradient(0deg, $color-a, $color-b);
+$thermometer-statistic-li-before: linear-gradient(90deg, rgba($color-black, .2), transparent);
+$thermometer-w: 100px;
+$thermometer-small-w: 100px;
+$thermometer-large-w: 100px;
+
+$thermometer-small-w-drawA: 14px;
+$thermometer-small-w-meter: 4px;
+$thermometer-small-drawA-after: 34px;
+$thermometer-small-drawB-after: 24px;
+
+$thermometer-normal-w-drawA: 30px;
+$thermometer-normal-w-meter: 10px;
+$thermometer-normal-drawA-after: 50px;
+$thermometer-normal-drawB-after: 34px;
+
+$thermometer-large-w-drawA: 50px;
+$thermometer-large-w-meter: 30px;
+$thermometer-large-drawA-after: 70px;
+$thermometer-large-drawB-after: 50px;
+
+$box-shadow-a: 0 0 0 1px rgba($color-black, .05), 1px 1px 5px rgba($color-black, .2);
+$box-shadow-b: 0 0 0 1px rgba(0, 0, 0, 0.1), 3px 3px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-c: 50%;
+
+$border-radius-a: 50px 50px 0 0;
+$border-radius-b: 2px;

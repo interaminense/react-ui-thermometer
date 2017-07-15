@@ -1,0 +1,261 @@
+@import 'variables';
+@import 'mixins';
+
+%transition-a {
+	transition: all .5s ease-in-out;
+}
+
+%extend-a {
+	content: "";
+	margin: auto;
+}
+
+%extend-b {
+	content: "";
+	background-color: $color-white;
+}
+
+%font-style-a {
+	font-size: 11px;
+	font-style: italic;
+	font-weight: 500;
+}
+
+%font-style-b {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+%no-gap {
+	margin: 0;
+	padding: 0;
+}
+
+%thermometer-small {
+	.thermometer__draw-a {
+		width: $thermometer-small-w-drawA;
+		
+		&:after {
+			width: $thermometer-small-drawA-after;
+			height: $thermometer-small-drawA-after;
+			bottom: -12px;
+		}
+	}
+	.thermometer__draw-b {
+		&:before {
+			width: $thermometer-small-w-meter;
+		}
+		&:after {
+			@include absolute-custom(13px, 0, initial, 0);
+			width: $thermometer-small-drawB-after;
+			height: $thermometer-small-drawB-after;
+		}
+	}
+	.thermometer__meter {
+		width: $thermometer-small-w-meter;
+	}
+}
+
+%thermometer-normal {
+	.thermometer__draw-a {
+		width: $thermometer-normal-w-drawA;
+		
+		&:after {
+			width: $thermometer-normal-drawA-after;
+			height: $thermometer-normal-drawA-after;
+			bottom: -20px;
+		}
+	}
+	.thermometer__draw-b {
+		&:before {
+			width: $thermometer-normal-w-meter;
+		}
+		&:after {
+			@include absolute-custom(8px, 0, initial, 0);
+			width: $thermometer-normal-drawB-after;
+			height: $thermometer-normal-drawB-after;
+		}
+	}
+	.thermometer__meter {
+		width: $thermometer-normal-w-meter;
+	}
+}
+
+%thermometer-large {
+	.thermometer__draw-a {
+		width: $thermometer-large-w-drawA;
+		
+		&:after {
+			width: $thermometer-large-drawA-after;
+			height: $thermometer-large-drawA-after;
+			bottom: -30px;
+		}
+	}
+	.thermometer__draw-b {
+		&:before {
+			width: $thermometer-large-w-meter;
+		}
+		&:after {
+			@include absolute-custom(0, 0, initial, 0);
+			width: $thermometer-large-drawB-after;
+			height: $thermometer-large-drawB-after;
+		}
+	}
+	.thermometer__meter {
+		width: $thermometer-large-w-meter;
+	}
+}
+
+.thermometer {
+	width: $thermometer-w;
+	position: relative;
+
+	&.thermometer--small {
+		@extend %thermometer-small;
+	}
+	&.thermometer--normal {
+		@extend %thermometer-normal;
+	}
+	&.thermometer--large {
+		@extend %thermometer-large;
+	}
+
+	ul.thermometer__statistics {
+		@include absolute-custom(0, initial, initial, 0);
+		@extend %font-style-a;
+		@extend %no-gap;
+		height: 100%;
+		text-shadow: 1px 1px $color-white;
+		z-index: 1;
+
+		li {
+			@include absolute-custom(initial, initial, initial, 0);
+			width: 56px;
+			text-align: right;
+			list-style: none;
+
+			&:before {
+				@include absolute-custom(initial, initial, -1px, 0);
+				content: "";
+				width: 100%;
+				background: $thermometer-statistic-li-before;
+				height: 1px;
+			}
+		}
+	}
+
+	.thermometer__meter {
+		@include absolute-custom(12px, 0, initial, 0);
+		height: calc(100% - 58px);
+		margin: auto;
+		background-color: $color-gray;
+		border-radius: $border-radius-a;
+		z-index: 1;
+	}
+
+	.thermometer__mercury {
+		@include absolute-custom(initial, initial, 0, 0);
+		@extend %transition-a;
+		width: 100%;
+		height: 0;
+		border-radius: $border-radius-a;
+	}
+
+	.thermometer__mask {
+		@include absolute-custom(initial, initial, 0, initial);
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		border-radius: $border-radius-a;
+	}
+
+	.thermometer__bg-color {
+		@include absolute-custom(initial, initial, 0, initial);
+		width: 100%;
+		background: $thermometer-bg-color;
+	}
+
+	.thermometer__percent-current {
+		@include absolute-custom(4px, initial, initial, 0);
+		@include translate(calc(-100% - 8px), -50%);
+		@extend %font-style-b;
+		padding: 5px 10px;
+		background-color: $color-white;
+		color: $color-black;
+		border-radius: $border-radius-b;
+		box-shadow: $box-shadow-b;
+
+		&:before,
+		&:after {
+			@extend %extend-a;
+			@include absolute-custom(0, 0, 0, initial);
+			width: 0;
+			height: 0;
+		}
+
+		&:after {
+			@include border(left, 8px, $color-white);
+			@include border(top, 6px, transparent);
+			@include border(bottom, 6px, transparent);
+			@include translate(calc(100% - 2px), 0);
+		}
+
+		&:before {
+			@include border(left, 8px, rgba($color-black, .1));
+			@include border(top, 6px, transparent);
+			@include border(bottom, 6px, transparent);
+			@include translate(calc(100% - 0px), 0);
+		}
+	}
+
+	.thermometer__draw-a {
+		position: relative;
+		height: calc(100% - 20px);
+		margin: auto;
+		background-color: $color-white;
+		border-radius: $border-radius-a;
+		box-shadow: $box-shadow-a;
+
+		&:after,
+		&:before {
+			@extend %extend-b;
+		}
+		&:before {
+			@include absolute-custom(initial, initial, 0 ,0);
+			height: 50px;
+			width: 100%;
+			z-index: 1;
+		}
+		&:after {
+			@include absolute-custom(initial, initial, -20px ,-10px);
+			width: 50px;
+			border-radius: $box-shadow-c;
+			box-shadow: $box-shadow-a;
+		}
+	}
+
+	.thermometer__draw-b {
+		@include absolute-custom(initial, 0, 0, 0);
+		width: 50px;
+		height: 50px;
+		margin: auto;
+		z-index: 1;
+
+		&:after {
+			@extend %extend-a;
+			width: 24px;
+			height: 24px;
+			background-color: $color-a;
+			border-radius: $box-shadow-c;
+		}
+
+		&:before {
+			@extend %extend-a;
+			@include absolute-custom(0, 0, 40px, 0);
+			height: 20px;
+			background-color: $color-a;
+			border-radius: $border-radius-a;
+		}
+	}
+}
