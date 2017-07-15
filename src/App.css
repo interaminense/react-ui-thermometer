@@ -1,0 +1,13 @@
+.flex {
+  display: flex; }
+  .flex.flex--inline {
+    flex-direction: row; }
+  .flex.flex--center {
+    justify-content: center;
+    align-items: center; }
+
+.separate {
+  margin: 0 50px; }
+
+body {
+  background-color: #fff; }
