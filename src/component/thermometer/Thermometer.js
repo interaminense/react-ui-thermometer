@@ -6,15 +6,11 @@ class Thermometer extends Component {
     super(props);
 
     this.state = {
+      theme: () => this.props.theme === 'light' || this.props.theme === 'dark' ? this.props.theme : 'light',
       max: this.props.max || 100, //default 100
       steps: this.props.steps || 4, //default 4
       format: this.props.format || '',
-      size: () => {
-        if (this.props.size !== 'small' && this.props.size !== 'normal' && this.props.size !== 'large') {
-          return 'normal';
-        }
-        return this.props.size;
-      },
+      size: () => this.props.size === 'small' || this.props.size === 'normal' || this.props.size === 'large' ? this.props.size : 'normal',
       height: this.props.height || 200, //default 100
       value: this.props.value || 0, //default 0
       valstr: () => this.state.format + this.state.value,
@@ -31,7 +27,12 @@ class Thermometer extends Component {
   }
 
   render() {
-
+    const theme = `thermometer--theme-${this.state.theme()}`;
+    const size = `thermometer--${this.state.size()}`;
+    const height = { height: `${this.state.height}px` };
+    const heightPercent = { height: `${this.state.percent()}%` };
+    const heightBgColor = { height: `calc(${this.state.height}px - 57px)` };
+    const valstr = this.state.valstr();
     const stepIntervals = this.state.intervals.map((step, i) => {
       return (
         <li key={i} style={{ bottom: `calc(${step.percent}% - 1px)` }}>
@@ -41,15 +42,15 @@ class Thermometer extends Component {
     });
 
     return (
-      <div style={{ height: `${this.state.height}px` }} className={`thermometer thermometer--${this.state.size()}`}>
+      <div style={height} className={`thermometer ${size} ${theme}`}>
         <div className="thermometer__draw-a"></div>
         <div className="thermometer__draw-b"></div>
         <div className="thermometer__meter">
           <ul className="thermometer__statistics">{stepIntervals}</ul>
-          <div style={{ height: `${this.state.percent()}%` }} className="thermometer__mercury">
-            <div className="thermometer__percent-current">{this.state.valstr()}</div>
+          <div style={heightPercent} className="thermometer__mercury">
+            <div className="thermometer__percent-current">{valstr}</div>
             <div className="thermometer__mask">
-              <div className="thermometer__bg-color" style={{ height: `calc(${this.state.height}px - 57px)` }}></div>
+              <div className="thermometer__bg-color" style={heightBgColor}></div>
             </div>
           </div>
         </div>

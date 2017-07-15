@@ -10,11 +10,6 @@
 	margin: auto;
 }
 
-%extend-b {
-	content: "";
-	background-color: $color-white;
-}
-
 %font-style-a {
 	font-size: 11px;
 	font-style: italic;
@@ -32,14 +27,21 @@
 	padding: 0;
 }
 
+//
+// Thermometer Small
+//
 %thermometer-small {
+	ul.thermometer__statistics li {
+		width: $thermometer-small-w-li;
+		padding-left: 8px;
+	} 
 	.thermometer__draw-a {
 		width: $thermometer-small-w-drawA;
 		
 		&:after {
+			@include absolute-custom(initial, initial, -12px ,-10px);
 			width: $thermometer-small-drawA-after;
 			height: $thermometer-small-drawA-after;
-			bottom: -12px;
 		}
 	}
 	.thermometer__draw-b {
@@ -57,14 +59,21 @@
 	}
 }
 
+//
+// Thermometer Normal
+//
 %thermometer-normal {
+	ul.thermometer__statistics li {
+		width: $thermometer-normal-w-li;
+		padding-left: 13px;
+	} 
 	.thermometer__draw-a {
 		width: $thermometer-normal-w-drawA;
 		
 		&:after {
+			@include absolute-custom(initial, initial, -20px ,-10px);
 			width: $thermometer-normal-drawA-after;
 			height: $thermometer-normal-drawA-after;
-			bottom: -20px;
 		}
 	}
 	.thermometer__draw-b {
@@ -82,14 +91,21 @@
 	}
 }
 
+//
+// Thermometer Large
+//
 %thermometer-large {
+	ul.thermometer__statistics li {
+		width: $thermometer-large-w-li;
+		padding-left: 34px;
+	} 
 	.thermometer__draw-a {
 		width: $thermometer-large-w-drawA;
 		
 		&:after {
+			@include absolute-custom(initial, initial, -30px ,-10px);
 			width: $thermometer-large-drawA-after;
 			height: $thermometer-large-drawA-after;
-			bottom: -30px;
 		}
 	}
 	.thermometer__draw-b {
@@ -107,18 +123,79 @@
 	}
 }
 
+//
+// Thermometer theme light
+//
+%thermometer-light {
+	.thermometer__draw-a {
+		&, &:before, &:after {
+			background-color: $color-white;
+		}
+	}
+	.thermometer__meter {
+		background-color: $color-gray;
+	}
+	ul.thermometer__statistics li {
+		color: $color-black;
+		&:before {
+			background: $thermometer-statistic-li-light-before;
+		}
+	}
+	.thermometer__percent-current {
+		color: $color-black;
+		background-color: $color-white;
+		&:after {
+			@include border(left, 8px, $color-white);
+		}
+	}
+}
+
+//
+// Thermometer theme dark
+//
+%thermometer-dark {
+	.thermometer__draw-a {
+		&, &:before, &:after {
+			background-color: $color-gray-2;
+		}
+	}
+	.thermometer__meter {
+		background-color: $color-gray-3;
+	}
+	ul.thermometer__statistics li {
+		color: $color-white;
+		&:before {
+			background: $thermometer-statistic-li-dark-before;
+		}
+	}
+	.thermometer__percent-current {
+		color: $color-white;
+		background-color: $color-gray-3;
+		&:after {
+			@include border(left, 8px, $color-gray-3);
+		}
+	}
+}
+
 .thermometer {
 	width: $thermometer-w;
 	position: relative;
 
-	&.thermometer--small {
+	&--small {
 		@extend %thermometer-small;
 	}
-	&.thermometer--normal {
+	&--normal {
 		@extend %thermometer-normal;
 	}
-	&.thermometer--large {
+	&--large {
 		@extend %thermometer-large;
+	}
+
+	&--theme-light {
+		@extend %thermometer-light;
+	}
+	&--theme-dark {
+		@extend %thermometer-dark;
 	}
 
 	ul.thermometer__statistics {
@@ -126,20 +203,16 @@
 		@extend %font-style-a;
 		@extend %no-gap;
 		height: 100%;
-		text-shadow: 1px 1px $color-white;
 		z-index: 1;
 
 		li {
 			@include absolute-custom(initial, initial, initial, 0);
-			width: 56px;
-			text-align: right;
 			list-style: none;
 
 			&:before {
 				@include absolute-custom(initial, initial, -1px, 0);
 				content: "";
 				width: 100%;
-				background: $thermometer-statistic-li-before;
 				height: 1px;
 			}
 		}
@@ -149,7 +222,6 @@
 		@include absolute-custom(12px, 0, initial, 0);
 		height: calc(100% - 58px);
 		margin: auto;
-		background-color: $color-gray;
 		border-radius: $border-radius-a;
 		z-index: 1;
 	}
@@ -163,7 +235,7 @@
 	}
 
 	.thermometer__mask {
-		@include absolute-custom(initial, initial, 0, initial);
+		@include absolute-custom(initial, initial, -1px, initial);
 		overflow: hidden;
 		width: 100%;
 		height: 100%;
@@ -181,8 +253,6 @@
 		@include translate(calc(-100% - 8px), -50%);
 		@extend %font-style-b;
 		padding: 5px 10px;
-		background-color: $color-white;
-		color: $color-black;
 		border-radius: $border-radius-b;
 		box-shadow: $box-shadow-b;
 
@@ -195,7 +265,6 @@
 		}
 
 		&:after {
-			@include border(left, 8px, $color-white);
 			@include border(top, 6px, transparent);
 			@include border(bottom, 6px, transparent);
 			@include translate(calc(100% - 2px), 0);
@@ -213,13 +282,12 @@
 		position: relative;
 		height: calc(100% - 20px);
 		margin: auto;
-		background-color: $color-white;
 		border-radius: $border-radius-a;
 		box-shadow: $box-shadow-a;
 
 		&:after,
 		&:before {
-			@extend %extend-b;
+			content: "";
 		}
 		&:before {
 			@include absolute-custom(initial, initial, 0 ,0);
@@ -228,8 +296,6 @@
 			z-index: 1;
 		}
 		&:after {
-			@include absolute-custom(initial, initial, -20px ,-10px);
-			width: 50px;
 			border-radius: $box-shadow-c;
 			box-shadow: $box-shadow-a;
 		}
@@ -244,8 +310,6 @@
 
 		&:after {
 			@extend %extend-a;
-			width: 24px;
-			height: 24px;
 			background-color: $color-a;
 			border-radius: $box-shadow-c;
 		}
