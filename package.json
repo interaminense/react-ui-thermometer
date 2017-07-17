@@ -1,7 +1,6 @@
 {
   "name": "react-ui-thermometer",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "gh-pages": "^1.0.0",
     "node-sass-chokidar": "0.0.3",
