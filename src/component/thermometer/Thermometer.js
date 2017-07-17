@@ -7,12 +7,12 @@ class Thermometer extends Component {
 
     this.state = {
       theme: () => this.props.theme === 'light' || this.props.theme === 'dark' ? this.props.theme : 'light',
+      value: this.props.value || 0, //default 0
       max: this.props.max || 100, //default 100
       steps: this.props.steps || 4, //default 4
       format: this.props.format || '',
       size: () => this.props.size === 'small' || this.props.size === 'normal' || this.props.size === 'large' ? this.props.size : 'normal',
-      height: this.props.height || 200, //default 100
-      value: this.props.value || 0, //default 0
+      height: this.props.height || 200, //default 200
       valstr: () => this.state.format + this.state.value,
       percent: () => this.state.value / this.state.max * 100,
       intervals: []
