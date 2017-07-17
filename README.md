@@ -1,6 +1,8 @@
-<h1>react-ui-thermometer</h1>
+<h1>react-ui-thermometer </h1>
 
-React UI Thermometer
+[![Build Status](https://travis-ci.org/interaminense/react-ui-thermometer.svg?branch=master)](https://travis-ci.org/interaminense/react-ui-thermometer)
+
+React UI Thermometer 
 
 This is component has created with create-react-app
 
