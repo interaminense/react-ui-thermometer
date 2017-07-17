@@ -9,7 +9,7 @@ class App extends Component {
       <div>
         <div className="height-20vh bgcolor-gray flex flex--column flex--center">
           <h2 className="no-gap">
-            <span role="img" aria-label="Thermometer">🌡️</span>️ React UI Thermomemter
+            <span role="img" aria-label="Thermometer">🌡️</span>️ React UI Thermometer
           </h2>
           <div>
             <a href="#documentation">see documentation</a>
@@ -41,7 +41,7 @@ class App extends Component {
         </div>
         <div id="documentation">
           <div className="height-10vh bgcolor-gray flex flex--column flex--center">
-            <h2><span role="img" aria-label="Thermometer">🌡️</span>️ React UI Thermomemter - Documentation</h2>
+            <h2><span role="img" aria-label="Thermometer">🌡️</span>️ React UI Thermometer - Documentation</h2>
           </div>
           <div className="height-60vh flex flex--center flex--column has-scroll">
             <table className="table bottom-gap">
