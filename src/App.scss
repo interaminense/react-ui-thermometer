@@ -1,22 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700');
+
+$color-white: #ffffff;
+$color-gray: #f0f0f0;
+$color-gray-2: #333333;
+$color-gray-3: #666666;
+
+$family-default: 'Fira Sans', sans-serif;
+
+$gap: 15px;
+
+a, a:visited { color: $color-gray-2; text-decoration: none; }
+a:hover { text-decoration: underline }
+
+.bgcolor-gray { background-color: $color-gray; }
+.bgcolor-gray-2 { background-color: $color-gray-2; }
+
+.color-gray-3 { color: $color-gray-3; }
+.color-white, .color-white a { color: $color-white; }
+
 .flex {
   display: flex;
 
-  &.flex--inline {
+  &--row {
     flex-direction: row;
   }
 
-  &.flex--center {
+  &--column {
+    flex-direction: column;
+  }
+
+  &--center {
     justify-content: center;
     align-items: center;
   }
 }
 
+.has-scroll { overflow: auto; }
+
 .separate {
   margin: 0 50px;
 }
 
-.height-50vh {
-  height: 50vh;
+.no-gap {
+  margin: 0;
+}
+
+.top-gap { margin-top: $gap; }
+.right-gap { margin-right: $gap; }
+.bottom-gap { margin-bottom: $gap; }
+.left-gap { margin-left: $gap; }
+
+@for $i from 1 through 10 {
+  .height-#{$i * 10}vh {
+    height: #{$i * 10}vh;
+  }
 }
 
 .has-contrast {
@@ -25,8 +62,27 @@
 
 body {
   background-color: #fff;
+  font-family: $family-default;
+  color: $color-gray-2;
 }
 
 .thermometer {
   margin: 0 50px;
+}
+
+.table {
+  border-spacing: 0;
+  border-top: 1px solid;
+  text-align: left;
+  border-left: 1px solid;
+}
+
+.table thead {
+  background-color: #f0f0f0;
+}
+
+.table th, .table td {
+  padding: 10px 20px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
 }

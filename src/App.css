@@ -1,22 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700");
+a, a:visited {
+  color: #333333;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.bgcolor-gray {
+  background-color: #f0f0f0; }
+
+.bgcolor-gray-2 {
+  background-color: #333333; }
+
+.color-gray-3 {
+  color: #666666; }
+
+.color-white, .color-white a {
+  color: #ffffff; }
+
 .flex {
   display: flex; }
-  .flex.flex--inline {
+  .flex--row {
     flex-direction: row; }
-  .flex.flex--center {
+  .flex--column {
+    flex-direction: column; }
+  .flex--center {
     justify-content: center;
     align-items: center; }
+
+.has-scroll {
+  overflow: auto; }
 
 .separate {
   margin: 0 50px; }
 
+.no-gap {
+  margin: 0; }
+
+.top-gap {
+  margin-top: 15px; }
+
+.right-gap {
+  margin-right: 15px; }
+
+.bottom-gap {
+  margin-bottom: 15px; }
+
+.left-gap {
+  margin-left: 15px; }
+
+.height-10vh {
+  height: 10vh; }
+
+.height-20vh {
+  height: 20vh; }
+
+.height-30vh {
+  height: 30vh; }
+
+.height-40vh {
+  height: 40vh; }
+
 .height-50vh {
   height: 50vh; }
+
+.height-60vh {
+  height: 60vh; }
+
+.height-70vh {
+  height: 70vh; }
+
+.height-80vh {
+  height: 80vh; }
+
+.height-90vh {
+  height: 90vh; }
+
+.height-100vh {
+  height: 100vh; }
 
 .has-contrast {
   background-color: #333; }
 
 body {
-  background-color: #fff; }
+  background-color: #fff;
+  font-family: "Fira Sans", sans-serif;
+  color: #333333; }
 
 .thermometer {
   margin: 0 50px; }
+
+.table {
+  border-spacing: 0;
+  border-top: 1px solid;
+  text-align: left;
+  border-left: 1px solid; }
+
+.table thead {
+  background-color: #f0f0f0; }
+
+.table th, .table td {
+  padding: 10px 20px;
+  border-right: 1px solid;
+  border-bottom: 1px solid; }
