@@ -17,5 +17,6 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "homepage" : "http://interaminense.github.io/react-ui-thermometer"
 }
