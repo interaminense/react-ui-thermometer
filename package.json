@@ -20,5 +20,11 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "http://interaminense.github.io/react-ui-thermometer"
+  "homepage": "http://interaminense.github.io/react-ui-thermometer",
+  "devDependencies": {
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-15": "^1.0.2",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^15.6.2"
+  }
 }
