@@ -1,0 +1,791 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thermometer Component tests should render the component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Thermometer
+    format="$"
+    height={180}
+    max={100}
+    size="small"
+    steps={3}
+    theme="light"
+    value={80}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="thermometer__draw-a"
+        />,
+        <div
+          className="thermometer__draw-b"
+        />,
+        <div
+          className="thermometer__meter"
+        >
+          <ul
+            className="thermometer__statistics"
+          >
+            <li
+              style={
+                Object {
+                  "bottom": "calc(0% - 1px)",
+                }
+              }
+            >
+              $0.00
+            </li>
+            <li
+              style={
+                Object {
+                  "bottom": "calc(33.33% - 1px)",
+                }
+              }
+            >
+              $33.33
+            </li>
+            <li
+              style={
+                Object {
+                  "bottom": "calc(66.67% - 1px)",
+                }
+              }
+            >
+              $66.67
+            </li>
+            <li
+              style={
+                Object {
+                  "bottom": "calc(100% - 1px)",
+                }
+              }
+            >
+              $100.00
+            </li>
+          </ul>
+          <div
+            className="thermometer__mercury"
+            style={
+              Object {
+                "height": "80%",
+              }
+            }
+          >
+            <div
+              className="thermometer__percent-current"
+            >
+              $80
+            </div>
+            <div
+              className="thermometer__mask"
+            >
+              <div
+                className="thermometer__bg-color"
+                style={
+                  Object {
+                    "height": "calc(180px - 57px)",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>,
+      ],
+      "className": "thermometer thermometer--small thermometer--theme-light",
+      "style": Object {
+        "height": "180px",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "thermometer__draw-a",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "thermometer__draw-b",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <ul
+              className="thermometer__statistics"
+            >
+              <li
+                style={
+                  Object {
+                    "bottom": "calc(0% - 1px)",
+                  }
+                }
+              >
+                $0.00
+              </li>
+              <li
+                style={
+                  Object {
+                    "bottom": "calc(33.33% - 1px)",
+                  }
+                }
+              >
+                $33.33
+              </li>
+              <li
+                style={
+                  Object {
+                    "bottom": "calc(66.67% - 1px)",
+                  }
+                }
+              >
+                $66.67
+              </li>
+              <li
+                style={
+                  Object {
+                    "bottom": "calc(100% - 1px)",
+                  }
+                }
+              >
+                $100.00
+              </li>
+            </ul>,
+            <div
+              className="thermometer__mercury"
+              style={
+                Object {
+                  "height": "80%",
+                }
+              }
+            >
+              <div
+                className="thermometer__percent-current"
+              >
+                $80
+              </div>
+              <div
+                className="thermometer__mask"
+              >
+                <div
+                  className="thermometer__bg-color"
+                  style={
+                    Object {
+                      "height": "calc(180px - 57px)",
+                    }
+                  }
+                />
+              </div>
+            </div>,
+          ],
+          "className": "thermometer__meter",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li
+                  style={
+                    Object {
+                      "bottom": "calc(0% - 1px)",
+                    }
+                  }
+                >
+                  $0.00
+                </li>,
+                <li
+                  style={
+                    Object {
+                      "bottom": "calc(33.33% - 1px)",
+                    }
+                  }
+                >
+                  $33.33
+                </li>,
+                <li
+                  style={
+                    Object {
+                      "bottom": "calc(66.67% - 1px)",
+                    }
+                  }
+                >
+                  $66.67
+                </li>,
+                <li
+                  style={
+                    Object {
+                      "bottom": "calc(100% - 1px)",
+                    }
+                  }
+                >
+                  $100.00
+                </li>,
+              ],
+              "className": "thermometer__statistics",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "$0.00",
+                  "style": Object {
+                    "bottom": "calc(0% - 1px)",
+                  },
+                },
+                "ref": null,
+                "rendered": "$0.00",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "$33.33",
+                  "style": Object {
+                    "bottom": "calc(33.33% - 1px)",
+                  },
+                },
+                "ref": null,
+                "rendered": "$33.33",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "$66.67",
+                  "style": Object {
+                    "bottom": "calc(66.67% - 1px)",
+                  },
+                },
+                "ref": null,
+                "rendered": "$66.67",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "3",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "$100.00",
+                  "style": Object {
+                    "bottom": "calc(100% - 1px)",
+                  },
+                },
+                "ref": null,
+                "rendered": "$100.00",
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="thermometer__percent-current"
+                >
+                  $80
+                </div>,
+                <div
+                  className="thermometer__mask"
+                >
+                  <div
+                    className="thermometer__bg-color"
+                    style={
+                      Object {
+                        "height": "calc(180px - 57px)",
+                      }
+                    }
+                  />
+                </div>,
+              ],
+              "className": "thermometer__mercury",
+              "style": Object {
+                "height": "80%",
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "$80",
+                  "className": "thermometer__percent-current",
+                },
+                "ref": null,
+                "rendered": "$80",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="thermometer__bg-color"
+                    style={
+                      Object {
+                        "height": "calc(180px - 57px)",
+                      }
+                    }
+                  />,
+                  "className": "thermometer__mask",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "thermometer__bg-color",
+                    "style": Object {
+                      "height": "calc(180px - 57px)",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="thermometer__draw-a"
+          />,
+          <div
+            className="thermometer__draw-b"
+          />,
+          <div
+            className="thermometer__meter"
+          >
+            <ul
+              className="thermometer__statistics"
+            >
+              <li
+                style={
+                  Object {
+                    "bottom": "calc(0% - 1px)",
+                  }
+                }
+              >
+                $0.00
+              </li>
+              <li
+                style={
+                  Object {
+                    "bottom": "calc(33.33% - 1px)",
+                  }
+                }
+              >
+                $33.33
+              </li>
+              <li
+                style={
+                  Object {
+                    "bottom": "calc(66.67% - 1px)",
+                  }
+                }
+              >
+                $66.67
+              </li>
+              <li
+                style={
+                  Object {
+                    "bottom": "calc(100% - 1px)",
+                  }
+                }
+              >
+                $100.00
+              </li>
+            </ul>
+            <div
+              className="thermometer__mercury"
+              style={
+                Object {
+                  "height": "80%",
+                }
+              }
+            >
+              <div
+                className="thermometer__percent-current"
+              >
+                $80
+              </div>
+              <div
+                className="thermometer__mask"
+              >
+                <div
+                  className="thermometer__bg-color"
+                  style={
+                    Object {
+                      "height": "calc(180px - 57px)",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>,
+        ],
+        "className": "thermometer thermometer--small thermometer--theme-light",
+        "style": Object {
+          "height": "180px",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "thermometer__draw-a",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "thermometer__draw-b",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <ul
+                className="thermometer__statistics"
+              >
+                <li
+                  style={
+                    Object {
+                      "bottom": "calc(0% - 1px)",
+                    }
+                  }
+                >
+                  $0.00
+                </li>
+                <li
+                  style={
+                    Object {
+                      "bottom": "calc(33.33% - 1px)",
+                    }
+                  }
+                >
+                  $33.33
+                </li>
+                <li
+                  style={
+                    Object {
+                      "bottom": "calc(66.67% - 1px)",
+                    }
+                  }
+                >
+                  $66.67
+                </li>
+                <li
+                  style={
+                    Object {
+                      "bottom": "calc(100% - 1px)",
+                    }
+                  }
+                >
+                  $100.00
+                </li>
+              </ul>,
+              <div
+                className="thermometer__mercury"
+                style={
+                  Object {
+                    "height": "80%",
+                  }
+                }
+              >
+                <div
+                  className="thermometer__percent-current"
+                >
+                  $80
+                </div>
+                <div
+                  className="thermometer__mask"
+                >
+                  <div
+                    className="thermometer__bg-color"
+                    style={
+                      Object {
+                        "height": "calc(180px - 57px)",
+                      }
+                    }
+                  />
+                </div>
+              </div>,
+            ],
+            "className": "thermometer__meter",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    style={
+                      Object {
+                        "bottom": "calc(0% - 1px)",
+                      }
+                    }
+                  >
+                    $0.00
+                  </li>,
+                  <li
+                    style={
+                      Object {
+                        "bottom": "calc(33.33% - 1px)",
+                      }
+                    }
+                  >
+                    $33.33
+                  </li>,
+                  <li
+                    style={
+                      Object {
+                        "bottom": "calc(66.67% - 1px)",
+                      }
+                    }
+                  >
+                    $66.67
+                  </li>,
+                  <li
+                    style={
+                      Object {
+                        "bottom": "calc(100% - 1px)",
+                      }
+                    }
+                  >
+                    $100.00
+                  </li>,
+                ],
+                "className": "thermometer__statistics",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "$0.00",
+                    "style": Object {
+                      "bottom": "calc(0% - 1px)",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "$0.00",
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "$33.33",
+                    "style": Object {
+                      "bottom": "calc(33.33% - 1px)",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "$33.33",
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "$66.67",
+                    "style": Object {
+                      "bottom": "calc(66.67% - 1px)",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "$66.67",
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "3",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "$100.00",
+                    "style": Object {
+                      "bottom": "calc(100% - 1px)",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "$100.00",
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="thermometer__percent-current"
+                  >
+                    $80
+                  </div>,
+                  <div
+                    className="thermometer__mask"
+                  >
+                    <div
+                      className="thermometer__bg-color"
+                      style={
+                        Object {
+                          "height": "calc(180px - 57px)",
+                        }
+                      }
+                    />
+                  </div>,
+                ],
+                "className": "thermometer__mercury",
+                "style": Object {
+                  "height": "80%",
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "$80",
+                    "className": "thermometer__percent-current",
+                  },
+                  "ref": null,
+                  "rendered": "$80",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="thermometer__bg-color"
+                      style={
+                        Object {
+                          "height": "calc(180px - 57px)",
+                        }
+                      }
+                    />,
+                    "className": "thermometer__mask",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "thermometer__bg-color",
+                      "style": Object {
+                        "height": "calc(180px - 57px)",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
