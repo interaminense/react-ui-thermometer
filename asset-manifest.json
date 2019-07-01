@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c625b13b.chunk.css",
-    "main.js": "/static/js/main.8bb8a987.chunk.js",
-    "main.js.map": "/static/js/main.8bb8a987.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.7b23240b.chunk.js": "/static/js/2.7b23240b.chunk.js",
-    "static/js/2.7b23240b.chunk.js.map": "/static/js/2.7b23240b.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.e62d569b635c2088da1cfb934aebc6f7.js": "/precache-manifest.e62d569b635c2088da1cfb934aebc6f7.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.c625b13b.chunk.css.map": "/static/css/main.c625b13b.chunk.css.map"
+    "main.css": "/react-ui-thermometer/static/css/main.c625b13b.chunk.css",
+    "main.js": "/react-ui-thermometer/static/js/main.4843480b.chunk.js",
+    "main.js.map": "/react-ui-thermometer/static/js/main.4843480b.chunk.js.map",
+    "runtime~main.js": "/react-ui-thermometer/static/js/runtime~main.9f4df80b.js",
+    "runtime~main.js.map": "/react-ui-thermometer/static/js/runtime~main.9f4df80b.js.map",
+    "static/js/2.7b23240b.chunk.js": "/react-ui-thermometer/static/js/2.7b23240b.chunk.js",
+    "static/js/2.7b23240b.chunk.js.map": "/react-ui-thermometer/static/js/2.7b23240b.chunk.js.map",
+    "index.html": "/react-ui-thermometer/index.html",
+    "precache-manifest.1a210b25a1b933430930b33558f1d601.js": "/react-ui-thermometer/precache-manifest.1a210b25a1b933430930b33558f1d601.js",
+    "service-worker.js": "/react-ui-thermometer/service-worker.js",
+    "static/css/main.c625b13b.chunk.css.map": "/react-ui-thermometer/static/css/main.c625b13b.chunk.css.map"
   }
 }
