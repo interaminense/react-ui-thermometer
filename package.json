@@ -21,6 +21,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "http://interaminense.github.io/react-ui-thermometer",
   "browserslist": {
     "production": [
       ">0.2%",
