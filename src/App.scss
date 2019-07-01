@@ -19,30 +19,30 @@ a:hover { text-decoration: underline }
 .color-white, .color-white a { color: $color-white; }
 
 .flex {
-  display: flex;
-
-  &--row {
-    flex-direction: row;
-  }
-
-  &--column {
-    flex-direction: column;
-  }
-
-  &--center {
-    justify-content: center;
-    align-items: center;
-  }
+	display: flex;
+	
+	&--row {
+		flex-direction: row;
+	}
+	
+	&--column {
+		flex-direction: column;
+	}
+	
+	&--center {
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .has-scroll { overflow: auto; }
 
 .separate {
-  margin: 0 50px;
+	margin: 0 50px;
 }
 
 .no-gap {
-  margin: 0;
+	margin: 0;
 }
 
 .top-gap { margin-top: $gap; }
@@ -51,38 +51,38 @@ a:hover { text-decoration: underline }
 .left-gap { margin-left: $gap; }
 
 @for $i from 1 through 10 {
-  .height-#{$i * 10}vh {
-    height: #{$i * 10}vh;
-  }
+	.height-#{$i * 10}vh {
+		height: #{$i * 10}vh;
+	}
 }
 
 .has-contrast {
-  background-color: #333;
+	background-color: #333;
 }
 
 body {
-  background-color: #fff;
-  font-family: $family-default;
-  color: $color-gray-2;
+	background-color: #fff;
+	font-family: $family-default;
+	color: $color-gray-2;
 }
 
 .thermometer {
-  margin: 0 50px;
+	margin: 0 50px;
 }
 
 .table {
-  border-spacing: 0;
-  border-top: 1px solid;
-  text-align: left;
-  border-left: 1px solid;
+	border-spacing: 0;
+	border-top: 1px solid;
+	text-align: left;
+	border-left: 1px solid;
 }
 
 .table thead {
-  background-color: #f0f0f0;
+	background-color: #f0f0f0;
 }
 
 .table th, .table td {
-  padding: 10px 20px;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
+	padding: 10px 20px;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
 }
